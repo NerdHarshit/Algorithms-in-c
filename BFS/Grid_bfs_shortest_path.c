@@ -4,6 +4,11 @@
 #define ROW 4
 #define COL 4
 
+typedef struct {
+    int x;
+    int y;
+} Node;
+
 int grid[ROW][COL] = {
     {0, 0, 0, 1},
     {0, 1, 0, 0},
@@ -12,15 +17,10 @@ int grid[ROW][COL] = {
 };
 
 int visited[ROW][COL];
-int parentX[ROW][COL];
-int parentY[ROW][COL];
+Node parent[ROW][COL];
 
 int dx[4] = {-1, 1, 0, 0};
 int dy[4] = {0, 0, -1, 1};
-
-typedef struct {
-    int x, y;
-} Node;
 
 Node queue[ROW * COL];
 int front = 0, rear = 0;
@@ -32,22 +32,25 @@ int isValid(int x, int y) {
             !visited[x][y]);
 }
 
-void printPath(int gx, int gy) {
-    if (parentX[gx][gy] == -1) {
-        printf("(%d,%d) ", gx, gy);
+void printPath(int x, int y) {
+    if (parent[x][y].x == -1) {
+        printf("(%d,%d) ", x, y);
         return;
     }
-    printPath(parentX[gx][gy], parentY[gx][gy]);
-    printf("(%d,%d) ", gx, gy);
+
+    printPath(parent[x][y].x, parent[x][y].y);
+    printf("(%d,%d) ", x, y);
 }
 
 void BFS_shortest(int sx, int sy, int gx, int gy) {
 
+    front = rear = 0;
+
     for (int i = 0; i < ROW; i++)
         for (int j = 0; j < COL; j++) {
             visited[i][j] = 0;
-            parentX[i][j] = -1;
-            parentY[i][j] = -1;
+            parent[i][j].x = -1;
+            parent[i][j].y = -1;
         }
 
     queue[rear++] = (Node){sx, sy};
@@ -68,8 +71,7 @@ void BFS_shortest(int sx, int sy, int gx, int gy) {
 
             if (isValid(nx, ny)) {
                 visited[nx][ny] = 1;
-                parentX[nx][ny] = curr.x;
-                parentY[nx][ny] = curr.y;
+                parent[nx][ny] = curr;
                 queue[rear++] = (Node){nx, ny};
             }
         }

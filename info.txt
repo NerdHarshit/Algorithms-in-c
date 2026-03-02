@@ -1,0 +1,237 @@
+UNIT 2 – FULL ROADMAP
+🟢 PART A – Uninformed Search (We are here)
+1️⃣ Breadth First Search (DONE)
+
+What remains in BFS:
+
+Formal properties (complete, optimal, complexity)
+
+Tree search vs Graph search difference
+
+Why memory heavy
+
+That’s small. You’re basically done with BFS.
+
+2️⃣ Depth First Search (Next)
+
+You must cover:
+
+Recursive DFS
+
+Iterative DFS (stack)
+
+Time complexity O(b^m)
+
+Space complexity O(bm)
+
+Why not optimal
+
+Why not complete in infinite depth
+
+Also:
+
+DFS shortest path? (No guarantee)
+
+DFS on grid
+
+This is quick because concept similar to BFS.
+
+3️⃣ Depth Limited Search (DLS)
+
+Fixes DFS infinite-depth issue.
+
+You must understand:
+
+Add depth parameter
+
+Cutoff condition
+
+Cutoff vs failure distinction
+
+Very important exam theory question.
+
+4️⃣ Iterative Deepening DFS (IDDFS)
+
+This is VERY important.
+
+Concept:
+
+Run DLS with:
+depth = 0
+depth = 1
+depth = 2
+...
+
+Until goal found.
+
+You must understand:
+
+Why it combines BFS optimality + DFS memory efficiency
+
+Time complexity reasoning
+
+This is high-scoring topic.
+
+After this, Uninformed Search is complete.
+
+🟡 PART B – Informed Search (Very Important)
+
+Now things become powerful.
+
+5️⃣ Greedy Best First Search
+
+Uses:
+
+Heuristic h(n)
+
+Chooses node with smallest h(n).
+
+Must understand:
+
+Why not optimal
+
+How heuristic influences search
+
+6️⃣ A* Search (MOST IMPORTANT IN UNIT 2)
+
+Core formula:
+
+f(n) = g(n) + h(n)
+
+Where:
+
+g(n) = cost so far
+
+h(n) = heuristic estimate
+
+You must understand:
+
+Admissible heuristic
+
+Consistent heuristic
+
+Why A* is optimal
+
+Difference from Dijkstra
+
+Priority queue usage
+
+This is the crown jewel of Unit 2.
+
+7️⃣ Memory-Bounded Heuristic Search
+
+Brief theoretical knowledge:
+
+IDA*
+
+RBFS
+
+Mostly conceptual for exam.
+
+🟠 PART C – Local Search & Optimization
+
+These are NOT tree search.
+
+They work differently.
+
+8️⃣ Hill Climbing
+
+Greedy local improvement
+
+Gets stuck in local maxima
+
+Plateaus
+
+Ridge problem
+
+Very common 5–8 mark question.
+
+9️⃣ Simulated Annealing
+
+Temperature concept
+
+Probabilistic escape
+
+Cooling schedule
+
+Important theoretical concept.
+
+🔟 Genetic Algorithms
+
+Population
+
+Fitness function
+
+Selection
+
+Crossover
+
+Mutation
+
+This one is theory-heavy but easy scoring.
+
+1️⃣1️⃣ Ant Colony Optimization
+
+Mostly conceptual:
+
+Pheromones
+
+Evaporation
+
+Probabilistic path selection
+
+Light but scoring.
+
+🔴 PART D – Adversarial Search (Game Playing)
+
+Very important.
+
+1️⃣2️⃣ Minimax Algorithm
+
+Game tree
+
+MAX player
+
+MIN player
+
+Backpropagation of values
+
+You must be able to:
+
+Solve small tree by hand.
+
+1️⃣3️⃣ Alpha-Beta Pruning
+
+Prune branches
+
+Alpha
+
+Beta
+
+Order importance
+
+This is scoring and logical.
+
+📊 Current Position Assessment
+
+You are here:
+
+Problem Formulation ✔
+BFS ✔
+
+Remaining:
+
+DFS
+DLS
+IDDFS
+Greedy
+A*
+Memory bounded
+Hill Climbing
+Simulated Annealing
+Genetic Algorithm
+Ant Colony
+Minimax
+Alpha-Beta
+
+So roughly 70% of Unit 2 remains.
