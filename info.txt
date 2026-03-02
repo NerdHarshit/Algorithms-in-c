@@ -1,16 +1,5 @@
 UNIT 2 – FULL ROADMAP
 🟢 PART A – Uninformed Search (We are here)
-1️⃣ Breadth First Search (DONE)
-
-What remains in BFS:
-
-Formal properties (complete, optimal, complexity)
-
-Tree search vs Graph search difference
-
-Why memory heavy
-
-That’s small. You’re basically done with BFS.
 
 2️⃣ Depth First Search (Next)
 
