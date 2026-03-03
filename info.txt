@@ -1,51 +1,11 @@
 UNIT 2 – FULL ROADMAP
 
-🟡 PART B – Informed Search (Very Important)
+whats left for later
+1) dijikstra
+2) grid versions of dls,dfid,gbfs,dijikstra,a*
 
-Now things become powerful.
-
-5️⃣ Greedy Best First Search
-
-Uses:
-
-Heuristic h(n)
-
-Chooses node with smallest h(n).
-
-Must understand:
-
-Why not optimal
-
-How heuristic influences search
-
-6️⃣ A* Search (MOST IMPORTANT IN UNIT 2)
-
-Core formula:
-
-f(n) = g(n) + h(n)
-
-Where:
-
-g(n) = cost so far
-
-h(n) = heuristic estimate
-
-You must understand:
-
-Admissible heuristic
-
-Consistent heuristic
-
-Why A* is optimal
-
-Difference from Dijkstra
-
-Priority queue usage
-
-This is the crown jewel of Unit 2.
-
-7️⃣ Memory-Bounded Heuristic Search
-
+3)Memory-Bounded Heuristic Search
+{
 Brief theoretical knowledge:
 
 IDA*
@@ -53,6 +13,9 @@ IDA*
 RBFS
 
 Mostly conceptual for exam.
+}
+
+--------------------------------------------------------------------------
 
 🟠 PART C – Local Search & Optimization
 
