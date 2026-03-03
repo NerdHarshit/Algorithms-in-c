@@ -131,7 +131,7 @@ void Greedy(int start, int goal) {
 
         for (int i = 0; i < V; i++) {
             if (adj[current][i] && !visited[i]) {
-                parent[i] = current;
+                parent[i] = current; 
                 push(i, h[i]);
             }
         }
